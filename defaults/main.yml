@@ -1,0 +1,44 @@
+---
+# defaults file for sa-php-apache
+
+  role_dir: "{{ role_path }}"
+
+  option_install_xdebug: false
+  php_xdebug_version: 2.5.5
+
+  option_install_composer: true
+
+  apache_mode: worker # prefork not supported by role design, check sa-lamp
+
+  php_apache_user: www-data
+  php_apache_group: www-data
+
+
+  php_family: default # 5.4 | 5.5 | 5.6 | 7.0 | default
+
+  php_module_prefix: php
+
+  pkg_dependencies_core:
+    - git
+    - curl
+    - libmysqlclient-dev
+    - unzip
+
+  pkg_dependencies: []
+
+  php_extensions_core:
+    - "{{php_module_prefix}}-mysql"
+    - "{{php_module_prefix}}-intl"
+    - "{{php_module_prefix}}-xmlrpc"
+    - "{{php_module_prefix}}-curl"
+    - "{{php_module_prefix}}-gd"
+
+  php_extensions: []
+
+  timezone: Europe/London
+
+  xdebug_remote_enable: 1
+# IMPORTANT - SETTING BELOW TO 1 ON PROD SERVERS RESULTS TO EXPLOIT
+# AS  xdebug_remote_host is ignored
+  xdebug_remote_connect_back: 0
+  xdebug_remote_host: "127.0.0.1"

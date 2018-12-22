@@ -1,0 +1,16 @@
+---
+  - name: Create demo site folder
+    file: path="/var/www/demo" state="directory"
+    become: yes
+
+  - name: Push demo site contents
+    synchronize: src="{{root_dir}}/files/demosite/" dest="/var/www/demo"
+    become: yes
+
+  - name: Template demosite apache config
+    template: src="{{root_dir}}/templates/apache/site.conf.j2" dest="/etc/apache2/sites-enabled/site.conf"
+    become: yes
+
+  - name: Restart apache
+    service: name="apache2" state="restarted"
+    become: yes

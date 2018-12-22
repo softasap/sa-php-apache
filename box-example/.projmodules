@@ -1,0 +1,9 @@
+[submodule "roles/sa-apache"]
+        path = roles/sa-apache
+        url = https://github.com/softasap/sa-apache.git
+[submodule "roles/sa-php-apache"]
+        path = roles/sa-php-apache
+        url = https://github.com/softasap/sa-php-apache.git
+[submodule "roles/sa-mysql"]
+        path = roles/sa-mysql
+        url = https://github.com/softasap/sa-mysql.git
