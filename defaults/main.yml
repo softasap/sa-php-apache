@@ -14,7 +14,7 @@
   php_apache_group: www-data
 
 
-  php_family: default # 5.4 | 5.5 | 5.6 | 7.0 | default
+  php_family: default # 5.4 | 5.5 | 5.6 | 7.0 | 7.1 | 7.2 | default
 
   php_module_prefix: php
 
