@@ -1,0 +1,6 @@
+- src: softasap.sa-apache
+  name: sa-apache
+- src: softasap.sa-php-apache
+  name: sa-php-apache
+- src: softasap.sa-mysql
+  name: sa-mysql
