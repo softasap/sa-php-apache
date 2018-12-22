@@ -10,7 +10,7 @@
 
     when:  php_family == "default"  or php_family == 5
 
-  - block:    
+  - block:
 
     - name: PHP | Fix php family prefix for 7
       set_fact:
@@ -68,7 +68,7 @@
       php_version: "5.6"
       php_module_prefix: "php5.6"
       php_prefix: "php5.6"
-      php_recipy: "5.6"      
+      php_recipy: "5.6"
     when: php_family == "5.6" or php_family == 5.6
 
   - name: PHP | Add apt repository for php 5.6
