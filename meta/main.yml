@@ -23,15 +23,14 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-        - trusty
         - xenial
+        - bionic
   galaxy_tags:
     - php
     - php5
     - php7
     - phpapache
     - lamp
-    - lemp
     - ubuntu
   #platforms:
   #- name: EL
