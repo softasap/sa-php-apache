@@ -69,11 +69,11 @@
       php_module_prefix: "php5.6"
       php_prefix: "php5.6"
       php_recipy: "5.6"
-    when: php_family == "5.6" or php_family == 5.6
+    when: php_version == "5.6" or php_family == 5
 
   - name: PHP | Add apt repository for php 5.6
     apt_repository: repo='ppa:ondrej/php'
-    when: php_family == "5.6" or php_family == 5.6
+    when: php_version == "5.6" or php_family == 5
     become: yes
     tags:
       -php
