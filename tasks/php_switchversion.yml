@@ -1,11 +1,11 @@
   - block:
 
     - name: PHP | Distribution defaults
-        set_fact:
-          php_version: "5.6"
-          php_module_prefix: "php5.6"
-          php_prefix: "php5.6"
-          php_recipy: "5.6"
+      set_fact:
+        php_version: "5.6"
+        php_module_prefix: "php5.6"
+        php_prefix: "php5.6"
+        php_recipy: "5.6"
       when: ansible_distribution_release in ["trusty"]
 
     when:  php_family == "default"  or php_family == 5
@@ -13,19 +13,19 @@
   - block:    
 
     - name: PHP | Fix php family prefix for 7
-        set_fact:
-          php_version: "7.0"
-          php_module_prefix: "php7.0"
-          php_prefix: "php7.0"
-          php_recipy: "7.0"
+      set_fact:
+        php_version: "7.0"
+        php_module_prefix: "php7.0"
+        php_prefix: "php7.0"
+        php_recipy: "7.0"
       when: ansible_distribution_release in ["xenial"]
 
     - name: PHP | Fix php family prefix for 7
-        set_fact:
-          php_version: "7.1"
-          php_module_prefix: "php7.1"
-          php_prefix: "php7.1"
-          php_recipy: "7.0"
+      set_fact:
+        php_version: "7.1"
+        php_module_prefix: "php7.1"
+        php_prefix: "php7.1"
+        php_recipy: "7.0"
       when: ansible_distribution_release in ["bionic"]
 
     when:  php_family == "default"  or php_family == 7
