@@ -22,9 +22,9 @@
 
     - name: PHP | Fix php family prefix for 7
       set_fact:
-        php_version: "7.1"
-        php_module_prefix: "php7.1"
-        php_prefix: "php7.1"
+        php_version: "7.2"
+        php_module_prefix: "php7.2"
+        php_prefix: "php7.2"
         php_recipy: "7.0"
       when: ansible_distribution_release in ["bionic"]
 
