@@ -1,7 +1,10 @@
 ---
 # tasks file for sa-php-apache
 
-  - debug: msg="Trying to use defaults {{ (override_os_family is defined) | ternary(override_os_family,ansible_os_family) | lower }}.yml with distribution tasks {{ (override_os_family is defined) | ternary(override_os_family,ansible_os_family) | lower }}.yml"
+  - debug: 
+      msg: >
+        Trying to use defaults {{ (override_os_family is defined) | ternary(override_os_family,ansible_os_family) | lower }}.yml
+        with distribution tasks {{ (override_os_family is defined) | ternary(override_os_family,ansible_os_family) | lower }}.yml
 
   - import_tasks: php_switchversion.yml
 
